@@ -1,11 +1,7 @@
 import { createMemoryHistory, createRouter } from 'vue-router'
-import HomeView from '@/pages/HomeView.vue'
-import AboutView from '@/pages/AboutView.vue'
-import Terminal from '@/pages/Terminal.vue'
+import indexPage from '@/pages/indexPage.vue'
 const routes = [
-  { path: '/', component: Terminal },
-  { path: '/about', component: AboutView },
-  { path: '/home', component: HomeView },
+  { path: '/', component: indexPage },
 ]
 
 const router = createRouter({
