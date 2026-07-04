@@ -1,11 +1,12 @@
-import type { CommandType } from '@/commands/type'
-import { clearCommand } from '@/commands/terminal/clearCommand'
-import { baiduSearchCommand } from '@/commands/search/baiduSearch'
+import type { CommandType } from './commands/type'
+import { clearCommand } from './commands/terminal/clearCommand'
+import { baiduSearchCommand } from './commands/search/baiduSearch'
+import { helpCommand } from './commands/terminal/helpCommand'
 
 /**
  * 命令列表
  */
-export const commandList: CommandType[] = [clearCommand, baiduSearchCommand]
+export const commandList: CommandType[] = [clearCommand, baiduSearchCommand, helpCommand]
 
 /**
  * 命令字典
@@ -21,4 +22,8 @@ commandList.forEach((command) => {
 
 export function getCommand(name: string) {
   return commandDict[name]
+}
+
+export function getAllCommands() {
+  return commandList
 }
